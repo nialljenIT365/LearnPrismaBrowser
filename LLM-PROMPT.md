@@ -43,9 +43,21 @@ HOSTING / FILE ACCESS (how to resolve and fetch files)
   is not fetchable on its own. You can only use a document's contents if: (a) it is
   already in your context, (b) you have a retrieval/RAG tool that resolves the filename,
   or (c) you have a browsing/Git tool AND the repo base URL below.
-- Repo raw base URL: <FILL IN, e.g. https://raw.githubusercontent.com/<owner>/<repo>/<branch>>
-  Resolve any relative filename `X.md` to:  <base-url>/X.md
-- If a file you need is NOT in your context and you have no tool to fetch it: DO NOT
+- Repo raw base URL: https://raw.githubusercontent.com/nialljenIT365/LearnPrismaBrowser/main
+  Resolve any relative filename `X.md` to:
+  https://raw.githubusercontent.com/nialljenIT365/LearnPrismaBrowser/main/X.md
+- BOOTSTRAP — if you have a URL-fetch/browse tool and the documents are NOT already in
+  your context, do this BEFORE answering the first question:
+  1) Fetch  https://raw.githubusercontent.com/nialljenIT365/LearnPrismaBrowser/main/INDEX.md
+  2) Use INDEX.md's tables to pick the file(s) relevant to the question.
+  3) Fetch those file(s) by their raw URL (base-url + filename).
+  4) Then answer from what you fetched. Fetch ONLY the files INDEX points you to —
+     never try to pull the whole corpus, and re-use already-fetched files across turns.
+- SIZE NOTE: some files are large (e.g. `strata-logging-service.md` is ~6 MB). Fetch a
+  file only when INDEX.md indicates it is relevant. If a needed file is too large to
+  fetch in full, say so and ask the user to narrow the question (or to use a
+  RAG/connector setup) — do NOT answer from a partial/truncated fetch without flagging it.
+- If a file you need is NOT in your context and you have NO tool to fetch it: DO NOT
   guess its contents. Name the file and the likely section (from INDEX.md) and ask for
   it to be provided. Rules 2 and 4 still apply — never fabricate the missing content.
 - The `*Source:` URLs inside the documents are already absolute live-documentation URLs

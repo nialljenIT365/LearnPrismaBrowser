@@ -56,16 +56,21 @@ Use a tool that ingests the whole repo: ChatGPT's *“Connect GitHub”*, a Clau
 files; the prompt + `INDEX.md` find the right ones. Best for the full corpus — it's
 too big to paste.
 
-**Option B — Browsing / Git-aware model + base URL.**
-If your model can fetch URLs, set the base URL in the prompt's *Hosting / File Access*
-section to:
+**Option B — Browsing / Git-aware model (e.g. ChatGPT with web access).**
+The repo's raw base URL is already baked into [LLM-PROMPT.md](LLM-PROMPT.md), and the
+prompt tells the model to **bootstrap from `INDEX.md`** automatically. So:
 
-```
-https://raw.githubusercontent.com/nialljenIT365/LearnPrismaBrowser/main
-```
+1. Paste the prompt (the BEGIN/END block) into the system / instructions field.
+2. Ask your question — the model fetches `…/main/INDEX.md`, picks the relevant file(s),
+   fetches their raw URLs, and answers with **Sources**.
 
-Then a relative name like `cloud-identity.md` resolves to
-`…/main/cloud-identity.md`.
+> **Gotcha (common):** just pasting the *repo link* into a chat usually makes the model
+> read only this README and stop. Paste the **prompt**, not just the link, so it knows to
+> go fetch `INDEX.md` and the right file. If it still doesn't fetch, tell it:
+> *“Fetch `https://raw.githubusercontent.com/nialljenIT365/LearnPrismaBrowser/main/INDEX.md`,
+> choose the relevant file, fetch its raw URL, then answer with sources.”*
+> The ~6 MB `strata-logging-service.md` may be too big to fetch in full — for
+> logging-heavy questions, prefer **Option A**.
 
 **Option C — Paste a subset.**
 For a focused question, paste **`INDEX.md` + the one or two relevant files** (chosen
