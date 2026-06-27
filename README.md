@@ -35,7 +35,7 @@ inventing answers: it responds **only** from these files and **cites the file +
 section + source URL** for every claim. If the answer isn't in the docs, it says so
 instead of guessing.
 
-> **The system prompt lives in [prisma-browser-qa-prompt.md](prisma-browser-qa-prompt.md).**
+> **The system prompt lives in [LLM-PROMPT.md](LLM-PROMPT.md).**
 > Copy the text **between the `=== BEGIN SYSTEM PROMPT ===` and `=== END SYSTEM PROMPT ===`
 > markers** — that block is what you paste into the LLM. Everything else in that file is
 > usage notes, a worked example, and tuning tips.

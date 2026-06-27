@@ -61,6 +61,7 @@ all files verified for clean headings, working in-page links, and no HTML leakag
 
 | Document | Size | Contents |
 |---|---|---|
+| [LLM-PROMPT.md](LLM-PROMPT.md) | 9 KB | **The grounded Q&A system prompt.** Paste the block between its BEGIN/END markers into your LLM to query this corpus with cited, hallucination-resistant answers (see [README.md](README.md) for setup). |
 | [doc-site-to-markdown-playbook.md](doc-site-to-markdown-playbook.md) | 11 KB | **Generic, agent-ready** method for crawling a documentation site into accurate Markdown (TOC∪BFS discovery, extraction, hygiene, resumability, coverage audit). |
 | [scanned-pdf-to-markdown-playbook.md](scanned-pdf-to-markdown-playbook.md) | 11 KB | Generic method for OCR-ing scanned/watermarked PDFs into Markdown. |
 | [SUMMARY.md](SUMMARY.md) | 5 KB | Runbook/status for the Prisma Access Browser web extraction (how to re-run). |
