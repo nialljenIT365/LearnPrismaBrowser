@@ -56,6 +56,7 @@ all files verified for clean headings, working in-page links, and no HTML leakag
 | [prisma-browser-entra-id-references.md](prisma-browser-entra-id-references.md) | 10 KB · 3 pp | Prisma Browser ↔ Entra ID: IP-Based Enforcement via Authentication Gateway, automatic web-app sign-in with Entra ID, macOS support; + index of 33 pages referencing Entra/Azure AD. |
 | [strata-cloud-manager-entra-id-integration.md](strata-cloud-manager-entra-id-integration.md) | 52 KB · 1 pg | Cloud Identity Engine "Configure an Identity Provider" — *Configure Azure as an IdP* (Entra ID via SAML 2.0) alongside Okta/Ping/Google. |
 | [scm-referenced-pages.md](scm-referenced-pages.md) | 6 KB · 2 pp | Two SCM pages the PB docs link to: Log Viewer, Monitor Data Centers — ZTNA Connectors. |
+| [prisma-browser-first-login-conditional-access.md](prisma-browser-first-login-conditional-access.md) | findings note | **Findings note (mixed sources — [OFFICIAL] vs [COMMUNITY/SUPPORT]).** First login / "bootstrap exclusion" question: confirms **no** documented first-login CA carve-out; the only practical carve-out (exclude native Outlook/Teams from the CA policy) is **community/support, not official**. Each claim is source-labelled. |
 
 ## 5. Dependency reference library (full/scoped doc-set crawls)
 
