@@ -40,6 +40,11 @@ instead of guessing.
 > markers** — that block is what you paste into the LLM. Everything else in that file is
 > usage notes, a worked example, and tuning tips.
 
+> **Driving an agent?** [AGENT-ONBOARDING.md](AGENT-ONBOARDING.md) explains how a fresh
+> agent should engage with this repo (orient → retrieve → read only the needed sections →
+> cite), and [WEB-AGENT-PROMPT.md](WEB-AGENT-PROMPT.md) is a ready-to-paste, self-contained
+> prompt for a browsing chatbot (Option B).
+
 ### Quick start
 
 1. Copy the prompt (between the BEGIN/END markers) into your LLM's **System** /
