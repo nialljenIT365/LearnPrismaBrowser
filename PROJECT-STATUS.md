@@ -30,9 +30,9 @@ and a paste-ready browsing prompt in [WEB-AGENT-PROMPT.md](WEB-AGENT-PROMPT.md).
   Its `CLAUDE.md` carries the session instructions.
 - **The owner also commits via the GitHub web UI** — always `git pull` immediately before
   pushing; never push from a stale tree.
-- **Legacy folder:** `C:\Users\blink\OneDrive\Documents\PrismaBrowser` was the original build
-  folder (corpus + source PDFs + build scripts). The PDFs/scripts are copied into the dev clone
-  (untracked); the Documents copy is now archival — don't edit docs there.
+- **Original build folder deleted:** `C:\Users\blink\OneDrive\Documents\PrismaBrowser` was
+  removed 2026-07-02 after verifying all 37 files exist identically in this clone (source PDFs +
+  build scripts live here untracked; only `convert_pdfs_to_md.py` is committed).
 - **Answering questions from the corpus:** follow [AGENT-ONBOARDING.md](AGENT-ONBOARDING.md) —
   orient via INDEX → retrieve (RAG index or fetch-by-name) → read **only** the needed sections →
   cite `file → section → *Source:` URL → say "not covered" when true, but **open the specific page

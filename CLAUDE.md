@@ -30,7 +30,8 @@ queried by an LLM with citations.
 - Source PDFs (`*.pdf`) and build scripts other than `convert_pdfs_to_md.py` are deliberately
   **untracked** — don't commit them without being asked.
 
-## Related locations
+## History
 
-- `C:\Users\blink\OneDrive\Documents\PrismaBrowser` — original build folder, now **archive**;
-  don't edit docs there.
+- The original build folder (`C:\Users\blink\OneDrive\Documents\PrismaBrowser`) was **deleted
+  2026-07-02** after verifying all 37 files exist identically here. This clone is the only
+  local copy.
