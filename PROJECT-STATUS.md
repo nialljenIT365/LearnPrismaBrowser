@@ -24,12 +24,15 @@ and a paste-ready browsing prompt in [WEB-AGENT-PROMPT.md](WEB-AGENT-PROMPT.md).
 
 ## Working conventions (read before changing anything)
 
-- **Local source-of-truth folder:** `C:\Users\blink\OneDrive\Documents\PrismaBrowser` — it is **not**
-  a git repo. To commit: clone `https://github.com/nialljenIT365/LearnPrismaBrowser` fresh to a temp
-  dir, copy changed files in, commit as `nialljenIT365 <nialljen@gmail.com>` (**no AI co-author
-  lines**), push, and copy any merge results back so local and remote stay identical.
-- **The owner also commits via the GitHub web UI** — always clone/pull fresh immediately before
-  pushing; never push from a stale clone.
+- **Primary working copy:** `C:\Users\blink\OneDrive\1.Development\LearnPrismaBrowser` — a real
+  **git clone** of `https://github.com/nialljenIT365/LearnPrismaBrowser`. Edit, commit
+  (as `nialljenIT365 <nialljen@gmail.com>`, **no AI co-author lines**) and push directly from here.
+  Its `CLAUDE.md` carries the session instructions.
+- **The owner also commits via the GitHub web UI** — always `git pull` immediately before
+  pushing; never push from a stale tree.
+- **Legacy folder:** `C:\Users\blink\OneDrive\Documents\PrismaBrowser` was the original build
+  folder (corpus + source PDFs + build scripts). The PDFs/scripts are copied into the dev clone
+  (untracked); the Documents copy is now archival — don't edit docs there.
 - **Answering questions from the corpus:** follow [AGENT-ONBOARDING.md](AGENT-ONBOARDING.md) —
   orient via INDEX → retrieve (RAG index or fetch-by-name) → read **only** the needed sections →
   cite `file → section → *Source:` URL → say "not covered" when true, but **open the specific page
@@ -70,3 +73,7 @@ special use cases (SC-vs-ZTNA matrix + Advanced Deployments).
   RAG bootstrap instructions fixed (base URL + INDEX-first fetch).
 - **2026-07-02** — grounded Q&A session (topics above); added AGENT-ONBOARDING.md,
   WEB-AGENT-PROMPT.md, README pointers (`858690b`, `d153ed5`); this status file added.
+- **2026-07-02 (handoff)** — established the dev working clone at
+  `C:\Users\blink\OneDrive\1.Development\LearnPrismaBrowser` with `CLAUDE.md`; source PDFs +
+  build scripts copied there (untracked); `convert_pdfs_to_md.py` committed (INDEX references it);
+  Documents folder demoted to archive.
